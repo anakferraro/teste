@@ -3,12 +3,7 @@ import Expo2DContext from 'expo-2d-context';
 import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system';
 
-/**
- * Binariza a imagem (preto e branco) e salva no cache do app.
- * @param {string} uri - URI da imagem original.
- * @param {number} threshold - Valor de corte para binarização (0-255).
- * @returns {Promise<string>} URI da imagem processada.
- */
+
 export async function binarizeImageFromUri(uri, threshold = 128) {
   try {
     // Carrega o asset a partir do URI
@@ -54,12 +49,9 @@ export async function binarizeImageFromUri(uri, threshold = 128) {
   }
 }
 
-/**
- * Função simples para converter RGBA Uint8ClampedArray em base64 PNG
- * Aqui você pode usar uma biblioteca adicional como 'fast-png' ou 'pngjs' se necessário.
- */
+
 function pngEncode(data, width, height) {
-  // Para fins de exemplo, você pode usar 'react-native-png' ou outra lib
-  // Aqui retornamos vazio, substitua por implementação real
+
   return '';
 }
+
