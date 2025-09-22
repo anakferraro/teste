@@ -22,7 +22,7 @@ export async function binarizeImageFromUri(uri, threshold = 128) {
     // Extrai dados de pixel
     const pixelData = await getPixelData({ expo2dContext: gl, source });
 
-    const data = pixelData.data; // Uint8ClampedArray RGBA
+    const data = pixelData.data; 
     const width = pixelData.width;
     const height = pixelData.height;
 
@@ -33,7 +33,7 @@ export async function binarizeImageFromUri(uri, threshold = 128) {
       data[i] = value;
       data[i + 1] = value;
       data[i + 2] = value;
-      // data[i + 3] permanece alfa
+    
     }
 
     // Cria nova imagem PNG
@@ -54,4 +54,5 @@ function pngEncode(data, width, height) {
 
   return '';
 }
+
 
